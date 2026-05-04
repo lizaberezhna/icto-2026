@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Сцена - A-Frame</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="info">
+        <strong>Звіт про виконані завдання</strong><br>
+        Студентки групи Ім-25
+    </div>
+    <div class="controls-info">
+     
+    </div>
+
+    <a-scene background="color: #111111">
+        <a-sky color="#1a1a2e" radius="50"></a-sky>
+        
+        <a-light type="ambient" color="#404060" intensity="0.7"></a-light>
+        <a-light type="directional" position="5 10 3" intensity="0.8" color="#ffffff"></a-light>
+        <a-light type="point" position="-2 3 -4" intensity="0.4" color="#ffaa66"></a-light>
+
+        <a-plane position="0 0 0" rotation="-90 0 0" width="10" height="10" color="#4a6fa5" shadow="receive: true"></a-plane>
+        
+        <a-torus position="-2 1.5 -1.6" rotation="45 30 0" color="#ff6b6b" radius="0.9" radius-tubular="0.2" shadow="cast: true"></a-torus>
+        
+        <a-cylinder position="2.2 0.5 -4.5" radius="0.6" height="1.6" color="#4ecdc4" shadow="cast: true"></a-cylinder>
+    
+        <a-entity position="0 1.5 5">
+            <a-camera look-controls="enabled: true" wasd-controls="enabled: true">
+                <a-cursor color="#ff6b6b" fuse="false"></a-cursor>
+            </a-camera>
+        </a-entity>
+    </a-scene>
+
+    <script src="script.js"></script>
+</body>
+</html>
